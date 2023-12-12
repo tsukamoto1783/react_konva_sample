@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { GridLine, buildGrid } from './grid';
-import { Stage, Layer, Line, Text, Rect, Group } from 'react-konva';
+import { Stage, Layer, Line } from 'react-konva';
 
 export const GridSpanForm = () => {
     const [xGridSpan, setXGridSpan] = useState<string>('');
