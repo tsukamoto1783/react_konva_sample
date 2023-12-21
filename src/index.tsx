@@ -1,17 +1,23 @@
 import { createRoot } from 'react-dom/client';
-import { GridSpanForm } from './components/gridInputForm';
-import { InteractiveShape } from './components/objectSample';
-import MyComponent from './components/moblable';
+import { StrictMode } from "react";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Home } from './pages/home';
+import { GridPage } from './pages/grid';
+import { ObjectScalingPage } from './pages/object_scaling';
+import { GridObjectPage } from './pages/grid_object';
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
+
 root.render(
-  <div>
-    <InteractiveShape />
-    {/* <MyComponent /> */}
-    {/* <GridSpanForm /> */}
-
-    {/* <App /> */}
-
-  </div>
+  <StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/grid" element={<GridPage />} />
+        <Route path="/scaling" element={<ObjectScalingPage />} />
+        <Route path="/grid_object" element={<GridObjectPage />} />
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>
 );

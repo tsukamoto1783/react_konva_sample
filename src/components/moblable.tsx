@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Moveable from 'react-moveable';
 
-const MyComponent: React.FC = () => {
+const Moblable: React.FC = () => {
     const [target, setTarget] = useState<SVGElement | null>(null);
     const svgRef = useRef<SVGSVGElement>(null);
     const circleRef = useRef<SVGCircleElement>(null);
@@ -14,21 +14,21 @@ const MyComponent: React.FC = () => {
 
     return (
         <>
+            {/* canvas */}
             <svg
                 ref={svgRef}
-                width={400}
-                height={400}
+                width={200}
+                height={200}
                 style={{ border: '1px solid #000' }}
             >
                 <circle
                     ref={circleRef}
-                    // cx={window.innerWidth / 2}
-                    cx={400 / 2}
-                    cy={400 / 2}
+                    cx={100}
+                    cy={100}
                     r="50"
                     fill="white"
                     stroke="black"
-                    strokeWidth="4"
+                    strokeWidth="2"
                 />
             </svg>
             {target && (
@@ -50,4 +50,4 @@ const MyComponent: React.FC = () => {
     );
 };
 
-export default MyComponent;
+export default Moblable;

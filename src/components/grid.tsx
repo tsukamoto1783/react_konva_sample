@@ -9,8 +9,8 @@ export type GridLine = {
 export function buildGrid(
     screenWidth: number,
     screenHeight: number,
-    xGridSpan: number[],
-    yGridSpan: number[],
+    xGridSpan: number[] = [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50,],
+    yGridSpan: number[] = [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50,]
 ): GridLine[] {
     const lines: GridLine[] = [];
     const xSpan = [0, ...xGridSpan];
