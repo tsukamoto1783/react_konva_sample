@@ -1,16 +1,11 @@
-export type GridLine = {
-    key: string;
-    points: number[];
-    x: number;
-    y: number;
-};
+import { GridLine } from "../types/grid_line";
 
 // GridLineオブジェクトの配列を生成する関数
 export function buildGrid(
     screenWidth: number,
     screenHeight: number,
-    xGridSpan: number[] = [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50,],
-    yGridSpan: number[] = [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50,]
+    xGridSpan: number[] = [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
+    yGridSpan: number[] = [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]
 ): GridLine[] {
     const lines: GridLine[] = [];
     const xSpan = [0, ...xGridSpan];

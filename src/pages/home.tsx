@@ -14,6 +14,10 @@ export const Home: React.FC = () => {
         navigate('/grid_object');
     }
 
+    const onClickLayerCanvas = () => {
+        navigate('/layer_canvas');
+    }
+
     return (
         <div>
             <h1>react-konva sample</h1>
@@ -24,6 +28,9 @@ export const Home: React.FC = () => {
             <br />
             <br />
             <button onClick={onClickGridObject}>Gridの交点にObjedct配置demo</button>
+            <br />
+            <br />
+            <button onClick={onClickLayerCanvas}>Layer挙動demo</button>
             <br />
             <br />
         </div>

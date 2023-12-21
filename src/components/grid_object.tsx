@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Konva from 'konva';
 import { Stage, Layer, Line, Text, Rect, Group } from 'react-konva';
-import { buildGrid, GridLine } from './grid';
+import { buildGrid } from '../feature/build_grid';
+import { GridLine } from '../types/grid_line';
 
 export const GridObject: React.FC = () => {
     const [state, setState] = useState<{
