@@ -1,6 +1,16 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
+const style = {
+    width: '200px',
+    height: '50px',
+    fontSize: '20px',
+    backgroundColor: 'lightgreen',
+    borderRadius: '10px',
+}
+
+
+
 export const Home: React.FC = () => {
     const navigate = useNavigate();
 
@@ -30,9 +40,9 @@ export const Home: React.FC = () => {
             <button onClick={onClickGridObject}>Gridの交点にObjedct配置demo</button>
             <br />
             <br />
-            <button onClick={onClickLayerCanvas}>Layer挙動demo</button>
+            <button onClick={onClickLayerCanvas} style={style}>Layer挙動demo</button>
             <br />
             <br />
-        </div>
+        </div >
     )
 }

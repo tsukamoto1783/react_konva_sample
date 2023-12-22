@@ -28,6 +28,5 @@ export function buildCirclePoints(
             });
         }
     }
-
     return points;
 }
