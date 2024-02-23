@@ -1,13 +1,14 @@
-import { createRoot } from 'react-dom/client';
+import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Home } from './pages/home';
-import { GridPage } from './pages/grid';
-import { ObjectScalingPage } from './pages/object_scaling';
-import { GridObjectPage } from './pages/grid_object';
-import { LayerCanvas } from './pages/layer_canvas';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./pages/home";
+import { GridPage } from "./pages/grid";
+import { ObjectScalingPage } from "./pages/object_scaling";
+import { GridObjectPage } from "./pages/grid_object";
+import { LayerCanvas } from "./pages/layer_canvas";
+import { SvgKonva } from "./pages/svg_konva";
 
-const container = document.getElementById('root');
+const container = document.getElementById("root");
 const root = createRoot(container!);
 
 root.render(
@@ -19,6 +20,7 @@ root.render(
         <Route path="/scaling" element={<ObjectScalingPage />} />
         <Route path="/grid_object" element={<GridObjectPage />} />
         <Route path="/layer_canvas" element={<LayerCanvas />} />
+        <Route path="/svg_konva" element={<SvgKonva />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>
